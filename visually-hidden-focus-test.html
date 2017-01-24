@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>visibility:hidden - focus test</title>
+    <meta charset="utf-8">
+    <style>
+      /*Hidden visually, available for screenreaders. Same technique as in HTML5 boilerplate.*/
+      .visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Hidden elements - focus test</h1>
+    <p>A series of buttons, hidden in different ways. We'll see if they are focusable.<br />Each has a simple <code>onClick</code> handler which makes an <code>alert()</code> pop up to say which buton was pressed.<br />Even-numbered buttons will be visually hidden using various CSS techniques.<br />Odd-numbered buttons will remain unstyled, so they will help you to keep track of your position in the tab order.</p>
+
+    <p><button onClick="alert('button 1 clicked');">Button 1</button></p>
+
+    <p><button style="display:none;" onClick="alert('button 2 clicked');">Button 2</button> Button Two is hidden using CSS <code>display:none</code>. It isn't expected to be focusable. Focus will jump from Button 1 to Button 3.</p>
+
+    <p><button onClick="alert('button 3 clicked');">Button 3</button></p>
+
+    <p><button style="visibility:hidden;" onClick="alert('button 4 clicked');">Button 4</button> Button Four is hidden using CSS <code>visibility:hidden</code>. It has space reserved, so this paragraph is indented. It isn't expected to be focusable. Focus will jump from Button 3 to Button 5</p>
+
+    <p><button onClick="alert('button 5 clicked');">Button 5</button></p>
+
+    <p><button style="position:relative; left:-2000px;" onClick="alert('button 6 clicked');">Button 6</button> Button 6 is hidden "off-viewport" with negative positioning. Even though we can't see it, we can focus on it.</p>
+
+    <p><button onClick="alert('button 7 clicked');">Button 7</button></p>
+
+    <p><button class="visuallyhidden" onClick="alert('button 8 clicked');">Button 8</button> Button 8 is hidden using a <code>.visuallyhidden</code> class technique, similar to HTML5 boilerplate or Drupal8. Even though we can't see it, we can focus on it.</p>
+
+    <p><button onClick="alert('button 9 clicked');">Button 9</button></p>
+
+    <p><button style="opacity:0;" onClick="alert('button 10 clicked');">Button 10</button> Button 10 is hidden using CSS <code>opacity:0;</code> Even though we can't see it, we can focus on it.</p>
+
+    <p><button onClick="alert('button 11 clicked');">Button 11</button></p>
+
+    <p><button hidden onClick="alert('button 12 clicked');">Button 12</button> Button 12 is hidden using the HTML <code>hidden</code> attribute. This usually gets treated the same as using CSS <code>display:none</code>. Focus should jump from Button 11 to Button 13.</p>
+
+    <p><button onClick="alert('button 13 clicked');">Button 13</button></p>
+  </body>
+</html>
