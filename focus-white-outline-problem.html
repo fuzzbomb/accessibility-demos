@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Focus Demo: the white-outline problem</title>
+    <meta charset="utf-8">
+    <style>
+
+      body {
+        background-color: white;
+        color: black;
+      }
+      
+      button,
+      a.button {
+        background-color: #00aa7f; /* green */
+        background-color: #427AB3; /* grey-ish blue. */
+        color: white;
+        border: none;
+        text-decoration: none;
+        padding: 10px;
+      }
+
+      button.special:focus,
+      a.button.special:focus {
+        outline-color: darkred;
+        outline-color: #427AB3; /* same as button backgound */
+        outline-offset: 2px;
+        outline-style: solid;
+        outline-width: 1px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Focus Demo: the white-outline problem</h1>
+    <p>Let's say we want to style our links (or buttons) as flat blue buttons, with white text.  We haven't tried to suppress the outline style from the browser.  It's not always easy to tell when they are in focus - it varies from one web browser to another:
+      <ul>
+        <li>Firefox: the default outline is a dotted line <em>the same colour as the link text</em>.  This doesn't stand out against the page background, which is also white.i</li>
+        <li>Chrome: as of version 55, the default outline is a pale grey colour.  This is not a very good contrast against the white background of the page, or the blue background of the button.  Earlier versions of Chrome used an orange default outline colour.</li>
+        <li>Chromium: as of version 55, the default outline is a pale blue colour.  This is a better contrast against the white background of the page, but it is still not distinct from the blue background of the button.</li>
+      </ul>
+    </p>
+
+    <p>Here is a link with default browser style: <a href="https://bbc.co.uk/news">BBC News.</a></p>
+    <p>Here is a link which is styled like a button: <a class="button" href="https://google.com">Google</a></p>
+    <p>Here is an actual button element. <button onclick="alert('you pressed the shuffle button.');">Shuffle</button></p>
+    <p>Here is a link with default browser style: <a href="https://bbc.co.uk/sport">BBC Sport.</a></p>
+    <h2>Specify the <code>outline-color</code> property.</h2>
+    <p>To make the focus clearer, the next set of buttons have explicit outline styles.  The outline colour is chosen to stand out against the PAGE background and it there is an outline offset, so it appears like a separate ring around the button.</p>
+    <p>Here is a link which is styled like a button: <a class="button special" href="https://bing.com">Bing</a></p>
+    <p>Here is an actual button element. <button class="special" onclick="alert('you pressed the Yes! button.');">Yes!</button></p>
+    <p>Here is a link with default browser style: <a href="https://bbc.co.uk/weather">BBC Weather.</a></p>
+  </body>
+</html>
