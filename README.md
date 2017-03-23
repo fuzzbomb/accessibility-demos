@@ -13,3 +13,4 @@ A collection of web accessibility demonstrations.
   A form field which uses HTML5 autofocus.  Inteded to test whther browsers allow users to disable HTML5 autofocus.
 - [Javascript focus](http://fuzzbomb.github.io/accessibility-demos/javascript-focus-demo.html)
   A form field which is focussed using Javascript `.focus()` on load.
+- Landmarks regions using [explicit ARIA roles](https://fuzzbomb.github.io/accessibility-demos/landmarks-explicit-aria-role.html) and [implicit HTML accessibility API mappings](https://fuzzbomb.github.io/accessibility-demos/landmarks-implicit-aria-role.html). Useful for testing how these are reported in various browser/AT combinations.
