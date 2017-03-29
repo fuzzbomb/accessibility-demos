@@ -1,5 +1,5 @@
 # accessibility-demos
-[fuuzbomb.github.io/accessibility-demos](http://fuzzbomb.github.io/accessibility-demos/)
+[fuzzbomb.github.io/accessibility-demos](http://fuzzbomb.github.io/accessibility-demos/)
 
 A collection of web accessibility demonstrations.
 
