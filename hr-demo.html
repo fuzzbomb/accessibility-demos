@@ -17,6 +17,7 @@
     <p>TODO: can we think of a usecase for aria-labelledby on a HR? Labelled by what... the next heading element? Does that hold any benefit?</p>
     <p>So does it make any difference?</p>
     <h2>Findings</h2>
-    <p>Chrome + ChromeVox announces the separators which have a title or aria-label.  It does not announce the HR which has neither of these labels.  Where both attributes are present, only the aria-label is announced.</p>
+    <p>Chrome (v57 for Linux) + ChromeVox announces the separators which have a title or aria-label.  It does not announce the HR which has neither of these labels.  Where both attributes are present, only the aria-label is announced.</p>
+    <p>Chrome v56 + TalkBack + Android 6.0.1 - announces the separators which have a title or aria-label.  It does not announce the HR which has neither of these labels.  Where both attributes are present, BOTH were announced.</p>
   </body>
 </html>
