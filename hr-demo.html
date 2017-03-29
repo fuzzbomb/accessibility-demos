@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Horizontal rule demo</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Horizontal rule demo</h1>
+    <p>A simple demo page to test whether assistive technology makes any sepcial use of HTML HR elements.</p>
+    <hr />
+    <p>An old W3C document (<a href="https://www.w3.org/WAI/GL/techniques.htm">A. Modality independence</a>) suggests using a title attribute on a HR element.  The next separator has a title attribute.</p>
+    <hr title="separator 2 uses title attribute">
+    <p>I suppose we could also try using an aria-label attribute too.  The next HR has an aria-label attribute.</p>
+    <hr aria-label="separator 3 uses aria-label attribute">
+    <p>The next HR has both title and aria-label attributes.</p>
+    <hr aria-label="separator 4 has an aria-label attribute" title="separator 4 has a title attribute">
+    <p>TODO: can we think of a usecase for aria-labelledby on a HR? Labelled by what... the next heading element? Does that hold any benefit?</p>
+    <p>So does it make any difference?</p>
+    <h2>Findings</h2>
+    <p>Chrome + ChromeVox announces the separators which have a title or aria-label.  It does not announce the HR which has neither of these labels.  Where both attributes are present, only the aria-label is announced.</p>
+  </body>
+</html>
