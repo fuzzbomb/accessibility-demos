@@ -14,3 +14,4 @@ A collection of web accessibility demonstrations.
 - [Javascript focus](http://fuzzbomb.github.io/accessibility-demos/javascript-focus-demo.html)
   A form field which is focussed using Javascript `.focus()` on load.
 - Landmarks regions using [explicit ARIA roles](https://fuzzbomb.github.io/accessibility-demos/landmarks-explicit-aria-role.html) and [implicit HTML accessibility API mappings](https://fuzzbomb.github.io/accessibility-demos/landmarks-implicit-aria-role.html). Useful for testing how these are reported in various browser/AT combinations.
+- [Horizontal Rules with accessible labels](https://fuzzbomb.github.io/accessibility-demos/hr-demo.html).  An experiment to see whether assistive technology makes use of title or aria-label attributes on HR elements.
