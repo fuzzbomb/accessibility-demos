@@ -3,6 +3,8 @@
 
 A collection of web accessibility demonstrations.
 
+- [Number widget demo](http://fuzzbomb.github.io/accessibility-demos/number-widget-demo.html)
+  Different number widgets.
 - [Visually Hidden Focus Demo](http://fuzzbomb.github.io/accessibility-demos/visually-hidden-focus-test.html)
   Various ways to hide buttons with CSS, but they are stil present and operable.
 - [The button outline focus problem](http://fuzzbomb.github.io/accessibility-demos/focus-white-outline-problem.html)
