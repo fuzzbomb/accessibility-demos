@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Scroll events demo</title>
+        <meta charset="utf-8">
+        <style>
+            footer {
+                background: lightgray;
+                padding: 1em;
+            }
+            code {
+                background: lightgray;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            kbd.key {
+                border-radius: 3px;
+                padding: 1px 2px 0;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <main role="main">
+        <h1>Scroll events demo</h1>
+        <p>This page has a <code>scroll</code> event handler, which just logs the scroll event to the browser's dev tools console, using <code>console.info(ev)</code>.</p>
+        <p>Scroll events are caused by some keypresses:</p>
+        <ul>
+            <li><kbd><kbd class="key">Up</kbd></kbd> and <kbd><kbd class="key">Down</kbd></kbd> keys.</li>
+            <li><kbd><kbd class="key">Page Up</kbd></kbd> and <kbd><kbd class="key">Page Down</kbd></kbd> keys.</li>
+            <li><kbd><kbd class="key">Home</kbd></kbd> and <kbd><kbd class="key">End</kbd></kbd> keys.</li>
+            <li>Pressing <kbd><kbd class="key">Space</kbd></kbd> normally causes scrolling, unless a form control (e.g. a button or text input) has focus.</li>
+            <li>Pressing <kbd><kbd class="key">Tab</kbd></kbd> may cause scrolling, if the next element in the tabbing order is outside the viewport. For example, tabbing to the links in the footer of this page.</li>
+        </ul>
+        <section>
+            <h2>A short speciment form</h2>
+            <p>This is a short paragraph to introduce the form. It also has a link to <a href="http://bbc.co.uk/news">BBC News</a></p>
+            <form>
+                <label for="fav-color">Favourite Colour
+                    <input type="text" id="fav-color">
+                </label>
+                <br>
+                <label for="fav-animal">Favourite Animal
+                    <input type="text" id="fav-animal">
+                </label>
+            </form>
+            <p>Some text after the form, with another link to <a href="http://bbc.co.uk/weather">BBC Weather</a></p>
+        </section>
+        <section>
+            <h2>A long section of lorum ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies magna purus, et vehicula metus vulputate et. Vivamus ut sem ac dolor tincidunt facilisis. Suspendisse interdum urna odio, vel viverra magna viverra vel. Nam porta nisl eu sem sagittis ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi vehicula orci urna, non consectetur justo dignissim id. Pellentesque cursus iaculis felis, in facilisis nunc auctor sit amet. Morbi ornare eu leo pellentesque semper. Proin ut est turpis. Sed venenatis quis est eu lacinia. Sed tristique a metus eu fermentum. Aliquam nec ante in est semper tincidunt quis ut tellus. Etiam sed orci vel lectus bibendum pulvinar ac quis mauris. Aliquam at elit sed tellus sollicitudin venenatis ornare vel mi. Sed consequat vel enim vitae interdum.</p>
+            <p>Vestibulum auctor, nunc quis dictum molestie, diam sem consectetur mauris, nec venenatis risus leo eu arcu. In sollicitudin suscipit massa, nec auctor neque posuere eu. Aenean dignissim, mi vitae convallis tristique, diam orci elementum ante, sit amet faucibus orci metus id nisi. Fusce elit risus, ultricies et metus sed, suscipit pellentesque orci. Aenean scelerisque ut mauris ac placerat. Donec dapibus ante at iaculis lobortis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam vehicula quam varius arcu sollicitudin, non mattis mauris ornare. Morbi et semper nulla.</p>
+            <p>Integer rutrum condimentum elit, vel tempor velit tempor pulvinar. Etiam sed lectus dignissim, malesuada elit nec, iaculis felis. Sed eu ante sit amet risus malesuada vestibulum imperdiet quis tellus. Duis ac ultrices felis. Ut vel tempus diam, ac facilisis est. Aliquam quis ultrices erat, sed porttitor nisi. Sed nulla leo, feugiat ac quam in, semper tempor quam. Aliquam erat volutpat. Fusce sed volutpat lacus, in egestas nulla. Praesent ut ex massa. Vestibulum egestas nulla eget malesuada imperdiet. Morbi interdum auctor eros sit amet aliquam. Vivamus eget quam pulvinar, malesuada justo vitae, semper tortor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            <p>Aliquam sodales dapibus lorem, vehicula tincidunt ligula porttitor eget. Phasellus ac odio ac eros ullamcorper dignissim et at tortor. Donec eget aliquam massa. Nunc aliquam, sem nec dictum iaculis, urna orci elementum leo, at rhoncus erat urna vitae nisi. Morbi eu semper elit, vel condimentum erat. Quisque ornare convallis odio id pretium. Etiam at tellus vehicula, rutrum purus sit amet, eleifend enim. Pellentesque luctus neque vitae maximus fringilla. Aliquam lacinia, lacus et pulvinar convallis, leo tortor vestibulum diam, a consectetur urna orci vitae velit. Pellentesque euismod porttitor nulla sed placerat. Vivamus egestas congue eros, sed commodo nulla commodo id. Vivamus hendrerit tortor purus, sed euismod enim hendrerit vitae. Morbi ac tincidunt leo. Integer lorem sapien, dapibus vel nibh ut, ultricies aliquam magna.</p>
+            <p>Duis sed placerat dui, sit amet fermentum lectus. Vivamus euismod turpis et maximus lacinia. Quisque sagittis, nisl sit amet ornare efficitur, tellus mauris bibendum erat, quis cursus dolor dui dignissim quam. Nam mollis odio at orci eleifend, et convallis magna bibendum. Morbi interdum dictum elit et sollicitudin. Donec tincidunt lacus odio, gravida accumsan ipsum imperdiet fringilla. Fusce ac quam vel enim faucibus auctor quis vitae mauris.</p>
+            <p>Curabitur pulvinar venenatis dui. Pellentesque maximus neque luctus sapien lacinia, vehicula bibendum urna scelerisque. Nam vitae ante a ligula cursus consequat. Nulla facilisi. Nulla ornare bibendum purus, suscipit blandit ligula. Vivamus gravida sodales faucibus. Pellentesque tristique nibh felis, ac ultricies enim efficitur ut. Nunc nec eleifend eros. Ut placerat pharetra pulvinar. Morbi egestas odio eget ligula placerat tristique.</p>
+            <p>Sed non eleifend dolor, at finibus dolor. Phasellus vel ex sed nisi hendrerit condimentum. Nulla commodo nec ipsum ac venenatis. Curabitur sit amet dapibus neque. Curabitur porttitor, augue vitae vestibulum tempor, risus ante porttitor nulla, at pretium massa nunc vitae velit. Proin maximus nulla ac urna convallis viverra at sit amet dolor. Vivamus porta ex vel neque sagittis, non rutrum elit laoreet. Donec volutpat rhoncus erat, vel auctor nulla consectetur eu. Duis rutrum massa vel leo lacinia, eget blandit arcu suscipit.</p>
+            <p>Nunc sodales pellentesque diam, sit amet iaculis nisl placerat venenatis. Aenean quis mauris id nunc pretium congue et nec neque. Sed posuere ante ante, in sagittis diam iaculis et. Vestibulum lectus velit, tempor at quam ut, laoreet convallis tellus. Donec id leo bibendum, blandit erat nec, faucibus dui. In pretium lacus sed lacus scelerisque, at consectetur turpis congue. Vivamus non dolor eget elit dictum rutrum. Proin ante odio, hendrerit iaculis nisl ut, posuere pulvinar lacus. Nulla eget urna eu quam dapibus egestas. Integer libero tortor, euismod id feugiat et, posuere nec augue. Sed vehicula neque ac tincidunt blandit. Donec malesuada bibendum elementum. Cras quis faucibus dui. Suspendisse nec nulla rutrum, vulputate mi ut, faucibus nisl. Phasellus eget nulla in metus lobortis interdum et in lacus.</p>
+            <p>Quisque volutpat tellus sapien, in faucibus massa dictum sed. Donec interdum libero non eleifend fermentum. Vivamus enim enim, placerat eu suscipit ac, bibendum eu libero. Maecenas gravida id dui sit amet sollicitudin. Morbi interdum dolor quis est volutpat, non placerat risus efficitur. Nunc tristique finibus faucibus. Etiam ornare eros sit amet dignissim vestibulum. Nunc massa tellus, cursus scelerisque tincidunt in, hendrerit efficitur tellus. Quisque nec mauris sit amet mauris venenatis mollis. Suspendisse faucibus nec quam id efficitur. Sed ipsum est, iaculis nec diam non, porttitor sollicitudin sem. Duis vitae eros egestas, fringilla diam et, fermentum est. Donec sollicitudin fermentum facilisis. Integer feugiat magna ac augue tincidunt varius. In elementum lobortis feugiat. Mauris gravida felis non mollis molestie.</p>
+            <p>Morbi feugiat, risus vitae egestas tincidunt, nibh lacus porttitor urna, ut rhoncus sem enim et magna. Nulla quis ante et neque sodales interdum. Fusce est sem, rutrum sed maximus volutpat, dictum vitae nibh. Integer id turpis ullamcorper felis consectetur interdum. Nunc sodales nisl elit, at mollis leo efficitur ac. Etiam at lacus sapien. Aliquam erat volutpat. Vivamus eu metus justo. Mauris vitae consectetur elit, sed cursus nibh. Maecenas ac luctus augue. Suspendisse hendrerit, ante efficitur aliquam viverra, nisi ligula lobortis mauris, eu tempor libero mauris in felis.</p>
+            <p>Quisque congue non tellus nec dapibus. Cras aliquam neque vel rutrum mollis. Quisque ultrices mi nibh, id bibendum libero auctor in. Integer tempor nisi metus, ac rhoncus nulla dictum sit amet. Aenean pulvinar, magna nec luctus blandit, urna ipsum tempor nisl, at egestas sem elit sed lorem. Nunc augue eros, fermentum ac justo at, luctus tristique nulla. Sed laoreet nisl purus, ac scelerisque ex malesuada sodales. Nam eu molestie massa. Donec dui nisi, gravida sit amet arcu vitae, tempor consectetur sem. Donec sodales urna tortor, non tincidunt orci malesuada vel. Aliquam a libero lacinia ligula bibendum aliquet. Donec suscipit iaculis libero id feugiat. Donec laoreet nisl consequat dignissim congue.</p>
+            <p>Sed finibus, metus ut consectetur tempus, nisi nibh molestie dolor, eu rutrum quam augue sed odio. Pellentesque non ligula id ex facilisis cursus. Proin porttitor vestibulum sapien, quis tempor orci lobortis vitae. Nullam non molestie risus. Cras feugiat nibh sapien, sed tempor nunc pharetra vel. Mauris sit amet justo aliquet, ullamcorper felis sed, fermentum erat. Maecenas condimentum auctor augue, at molestie ipsum auctor vel. Curabitur non ante leo. Curabitur sit amet nibh purus. Morbi vestibulum nisl eget arcu auctor, vitae congue eros facilisis. Curabitur porta erat ut dapibus interdum. Donec ultricies dapibus venenatis. Vivamus porttitor odio in est pharetra, eu luctus metus accumsan. Nunc suscipit pellentesque elementum.</p>
+            <p>Praesent non rutrum augue. Donec quis nibh sapien. Ut finibus id arcu vel aliquet. Praesent efficitur ex ut nisl convallis, nec semper odio placerat. Nullam a vulputate augue, ac blandit leo. Morbi non ligula vel magna laoreet fringilla vitae vitae augue. Etiam ultrices eget tellus id auctor. Proin faucibus vehicula purus, ac facilisis nisi lacinia ut. Aenean dictum magna vel vestibulum aliquet. Aenean iaculis eros ac lectus commodo dapibus. Etiam sem diam, finibus at placerat et, rutrum non risus. Fusce id hendrerit enim, at interdum augue.</p>
+            <p>Sed vel sapien neque. Nulla pulvinar metus vel quam tristique, nec elementum elit consectetur. Mauris elit felis, tempor nec auctor vitae, fringilla ac diam. Proin malesuada nisl aliquet elit commodo euismod. Vestibulum auctor sed tortor at consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin elementum diam rhoncus orci aliquet semper. Suspendisse lacinia enim at pellentesque placerat. Nunc placerat sed tortor id ultricies. Vestibulum id scelerisque erat. Etiam quis luctus diam, ac tempus nunc. Aenean auctor est nisl, id tempus augue vehicula eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget neque ac nisl aliquet lobortis. Sed mattis felis ut pharetra rhoncus. Mauris ut dapibus nisi, quis auctor justo.</p>
+            <p>Cras imperdiet tincidunt libero, id suscipit lectus feugiat vitae. Aliquam sed euismod arcu. Aliquam in viverra nisi. Morbi egestas elementum ex, ut commodo sapien vehicula tristique. Maecenas lobortis turpis in tortor pellentesque ultrices. Donec dapibus, ipsum eget ullamcorper suscipit, nisi felis convallis augue, dictum auctor lorem diam vitae nisi. Curabitur vehicula malesuada tellus nec efficitur. Donec sed sodales elit. Nunc suscipit sapien finibus sem euismod, a congue nulla feugiat. Nulla accumsan elit in augue egestas, vel imperdiet ex auctor. Suspendisse potenti. Etiam lobortis a ex at scelerisque. Maecenas malesuada justo in nibh laoreet, ut facilisis elit viverra. Proin suscipit mattis velit nec sollicitudin. Maecenas quis massa laoreet, dignissim sapien in, bibendum turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Aliquam erat volutpat. Fusce molestie sodales ipsum, eu ullamcorper ipsum laoreet a. Nunc accumsan magna vitae pellentesque placerat. Morbi id imperdiet libero, ut accumsan tellus. Suspendisse ultrices dapibus nisl, vel vehicula metus sodales sit amet. Donec gravida vestibulum nunc, a imperdiet nulla tincidunt et. Cras vehicula orci sed dolor blandit pharetra. Ut ligula ex, accumsan at libero vitae, feugiat blandit turpis. Vestibulum iaculis molestie elementum.</p>
+            <p>Maecenas cursus eu dui ac aliquet. Fusce auctor porta massa, et commodo sapien. Morbi sit amet fringilla velit. Maecenas a aliquam nulla. Nunc blandit congue commodo. Donec imperdiet hendrerit pharetra. Nam laoreet diam eu molestie volutpat. Nullam eget fermentum diam. Quisque sed venenatis ex. Aliquam ultricies metus et erat tristique, at porttitor ante gravida. Nullam sed lorem consequat, laoreet orci in, laoreet nunc. Duis fermentum maximus dui fringilla congue. Suspendisse potenti.</p>
+            <p>Aliquam consequat vitae augue et aliquet. Phasellus semper, neque sed condimentum cursus, metus urna vestibulum leo, non aliquam ante nulla ac urna. Vivamus rutrum tellus non interdum posuere. Aenean dignissim mi non arcu posuere consequat. Pellentesque odio nunc, ullamcorper pretium metus non, euismod bibendum lacus. Sed augue diam, sodales in iaculis ut, consectetur eget elit. Vestibulum malesuada vitae lorem a auctor. Duis molestie est sapien, et interdum sem ultricies in. Vestibulum et eros enim. Duis consequat dui a ipsum bibendum elementum. Nulla vulputate gravida iaculis. Praesent dignissim urna in consequat eleifend.</p>
+            <p>Nulla vestibulum, mi in aliquam faucibus, diam nibh ullamcorper lectus, ut suscipit sapien nulla id est. Duis varius scelerisque justo, ac lobortis risus venenatis sed. Duis suscipit elit eget dui rhoncus, non sagittis diam ultricies. Aliquam vel orci euismod, pellentesque risus vitae, sodales tortor. Phasellus vel commodo risus, at pellentesque mi. Sed quis porttitor est. Aliquam in mauris aliquam, porttitor quam in, molestie ante. Duis auctor diam elit, vel sagittis tellus pharetra quis. Integer non commodo metus. Nunc ut turpis quis arcu faucibus fringilla volutpat id justo.</p>
+            <p>Sed congue congue magna, quis eleifend libero lacinia nec. Phasellus lacinia enim vel nulla sodales congue. Pellentesque malesuada ut magna at maximus. Maecenas at massa feugiat arcu fermentum sagittis ac vel odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec placerat semper massa et consectetur. Maecenas hendrerit mollis venenatis. Phasellus vel turpis nec libero fermentum sollicitudin efficitur quis nisi. Donec sit amet massa sapien. Aliquam varius nunc et arcu gravida, nec finibus elit tincidunt. Vestibulum iaculis vitae libero et tincidunt. Integer id enim nec risus molestie ultricies. Morbi posuere elit a finibus lobortis. In nisi nibh, feugiat non varius quis, gravida et quam.</p>
+        </section>
+        </main>
+        <footer role="contentinfo">
+            <p>Some footer links...</p>
+            <ul>
+                <li><a href="http://www.bbc.co.uk/news/disability">Disability</a></li>
+                <li><a href="http://www.bbc.co.uk/news/technology">Technology</a></li>
+                <li><a href="http://www.bbc.co.uk/news/science_and_environment">Science and Environment</a></li>
+                <li><a href="http://www.bbc.co.uk/news/health">Health</a></li>
+                <li><a href="http://www.bbc.co.uk/news/education">Education</a></li>
+                <li><a href="http://www.bbc.co.uk/news/entertainment_and_arts">Entertainment and Arts</a></li>
+                <li><a href="http://www.bbc.co.uk/news/special_reports">Special Reports</a></li>
+            </ul>
+        </footer>
+
+        <script>
+            // Demonstrates that some keypresses generate scroll events.
+            window.addEventListener('scroll', function(ev) {
+                console.info(ev);
+            });
+        </script>
+    </body>
+</html>
