@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MS High Contrast Media Query Test</title>
+    <meta charset="utf-8">
+    <style>
+      @media all and (-ms-high-contrast) {
+        .mshc:after {
+          content: ' MATCHED';
+        }
+      }
+
+      @media all and (-ms-high-contrast: none) {
+        .mshc-none:after {
+          content: ' MATCHED';
+        }
+      }
+
+      @media all and (-ms-high-contrast: active) {
+        .mshc-active:after {
+          content: ' MATCHED';
+        }
+      }
+
+      @media all and (-ms-high-contrast: white-on-black) {
+        .mshc-white-on-black:after {
+          content: ' MATCHED';
+        }
+      }
+
+      @media all and (-ms-high-contrast: black-on-white) {
+        .mshc-black-on-white:after {
+          content: ' MATCHED';
+        }
+      }
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        .mshc-none-or-active:after {
+          content: ' MATCHED';
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <main role="main">
+      <h1>MS High Contrast Media Query Test</h1>
+      <p>A test page for various ways to use the <code>-ms-high-contrast</code> media query.</p>
+      <p class="mshc"><code>@media all and (-ms-high-contrast)</code></p>
+      <p class="mshc-none"><code>@media all and (-ms-high-contrast: none)</code></p>
+      <p class="mshc-active"><code>@media all and (-ms-high-contrast: active)</code></p>
+      <p class="mshc-white-on-black"><code>@media all and (-ms-high-contrast: white-on-black)</code></p>
+      <p class="mshc-black-on-white"><code>@media all and (-ms-high-contrast: black-on-white)</code></p>
+      <p class="mshc-none-or-active"><code>@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)</code></p>
+    </main>
+  </body>
+</html>
