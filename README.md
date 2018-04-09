@@ -22,3 +22,5 @@ A collection of web accessibility demonstrations.
   A simple page in English containing some short passages of Irish, to demonstrate correct use of HTML `lang` attributes.
 - [MS High Contrast Media Query Test](https://fuzzbomb.github.io/accessibility-demos/ms-high-contrast-media-query.html).
   A test page for various ways to use the <code>-ms-high-contrast</code> media query.
+- [Scroll events demo](https://fuzzbomb.github.com/accessibility-demos/scroll-event-demo.html).
+  A long page which demonstrates how keypresses can lead to scroll events.
