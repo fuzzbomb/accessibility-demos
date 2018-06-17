@@ -24,3 +24,5 @@ A collection of web accessibility demonstrations.
   A test page for various ways to use the <code>-ms-high-contrast</code> media query.
 - [Scroll events demo](https://fuzzbomb.github.com/accessibility-demos/scroll-event-demo.html).
   A long page which demonstrates how keypresses can lead to scroll events.
+- [Duplicate IDs with aria-labelledby](https://fuzzbomb.github.io/accessibility-demos/svg-duplicate-title-id-demo.html)
+  A page with two SVG icons, both using aria-labelledby pointing to a nested SVG title.  Duplicate IDs mean both image get the same text alternative.
