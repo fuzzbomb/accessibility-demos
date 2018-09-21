@@ -27,19 +27,19 @@
     <h1>Hidden elements - focus test</h1>
     <p>A set of buttons, hidden in different ways. Let's see if they are focusable!<br />Each button has a pop up to say which button was pressed.<br />Even-numbered buttons are hidden using various CSS techniques.<br />Odd-numbered buttons are visible, to help you to keep track of your position in the tab order.</p>
 
-    <button onClick="alert('Button 1 clicked');">1</button>
-    <button onClick="alert('Button 2 clicked');" style="display:none;">2</button>
-    <button onClick="alert('Button 3 clicked');">3</button>
-    <button onClick="alert('Button 4 clicked');" style="visibility:hidden;">4</button>
-    <button onClick="alert('Button 5 clicked');">5</button>
-    <button onClick="alert('Button 6 clicked');" style="position:relative; left:-2000px;">6</button>
-    <button onClick="alert('Button 7 clicked');">7</button>
-    <button onClick="alert('Button 8 clicked');" class="visuallyhidden">8</button>
-    <button onClick="alert('Button 9 clicked');">9</button>
-    <button onClick="alert('Button 10 clicked');" style="opacity:0;">10</button>
-    <button onClick="alert('Button 11 clicked');">11</button>
-    <button onClick="alert('Button 12 clicked');" hidden>12</button>
-    <button onClick="alert('Button 13 clicked');">13</button>
+    <button>1</button>
+    <button style="display:none;">2</button>
+    <button>3</button>
+    <button style="visibility:hidden;">4</button>
+    <button>5</button>
+    <button style="position:relative; left:-2000px;">6</button>
+    <button>7</button>
+    <button class="visuallyhidden">8</button>
+    <button>9</button>
+    <button style="opacity:0;">10</button>
+    <button>11</button>
+    <button hidden>12</button>
+    <button>13</button>
 
     <p> Button Two is hidden using CSS <code>display:none</code>. It isn't expected to be focusable. Focus will jump from Button 1 to Button 3.</p>
 
@@ -53,5 +53,16 @@
 
     <p> Button 12 is hidden using the HTML <code>hidden</code> attribute. This usually gets treated the same as using CSS <code>display:none</code>. Focus should jump from Button 11 to Button 13.</p>
 
+    <script>
+        var buttons = document.querySelectorAll('button');
+        buttons.forEach(function(button) {
+            button.addEventListener(
+                'click',
+                function() {
+                    alert("Button " + button.textContent + " clicked.");
+                }
+            );
+        });
+    </script>
   </body>
 </html>
