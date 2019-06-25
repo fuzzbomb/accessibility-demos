@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>File Input with large dropzone demo</title>
+    <meta charset="utf-8">
+    <style>
+      /*Hidden visually, available for screenreaders. Same technique as in HTML5 boilerplate.*/
+      .visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+
+      .big-square {
+        display: block;
+        position: relative;
+        height: 15em;
+        width: 15em;
+        border: 2px solid black;
+        background-color: lightgrey;
+        text-align: center;
+      }
+
+      .fake-button {
+        position: absolute;
+        background-color: lightblue;
+        border-color: black;
+        border: solid black 1px;
+        padding: 1em;
+        top: 10em;
+        left: 5em;
+      }
+
+      form:focus-within .fake-button {
+        outline-offset: 4px;
+        outline: 2px green dashed;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <h1>File Input with large dropzone demo</h1>
+    <p>These two forms each have a single file input, which has been visually hidden. Instead, they both have a visible fake-button. The big square containers might have some JS drag-and-drop functionality added later, but these are just plain file inputs for now. </p>
+
+    <p>Form 1 uses a LABEL as the big square zone, and a span as the visible fake-button. Clicking anywhere inside the big square should activate the hidden file input. Also a link to <a href="http://bbc.co.uk/news">BBC News</a> acts as a way marker for keyboard navigation.</p>
+    <form id="form-1" action=".">
+      <label class="big-square">
+        <input id="file-1"
+               type="file"
+               class="visuallyhidden"
+               aria-label="Add file 1"
+               />
+        <span class="fake-button">Add file</span>
+      </label>
+    </form>
+    <p>Form 2 uses a DIV as the big square zone, and a LABEL as the visible fake-button. Clicking in the big square doesn't activate the file input; you need to click the fake-button to do that. Also, another link to <a href="http://bbc.co.uk/weather">BBC Weather</a></p>
+    <form id="form-2" action=".">
+      <div class="big-square">
+        <input id="file-2"
+               type="file"
+               class="visuallyhidden"
+               aria-label="Add file 2"
+               />
+        <label for="file-2" class="fake-button">Add file</label>
+      </div>
+    </form>
+    <p>Some text after the form, Plus, yet another link to <a href="http://bbc.co.uk/sport">BBC Sport</a></p>
+  </body>
+</html>
