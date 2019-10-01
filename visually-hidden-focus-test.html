@@ -49,6 +49,8 @@
         <button>11</button>
         <button hidden>12</button>
         <button>13</button>
+        <button tabindex="-1" class="visuallyhidden">14</button>
+        <button>15</button>
     </div>
 
     <p> Button Two is hidden using CSS <code>display:none</code>. It isn't expected to be focusable. Focus will jump from Button 1 to Button 3.</p>
@@ -61,7 +63,9 @@
 
     <p> Button 10 is hidden using CSS <code>opacity:0;</code> Even though we can't see it, we can focus on it.</p>
 
-    <p> Button 12 is hidden using the HTML <code>hidden</code> attribute. This usually gets treated the same as using CSS <code>display:none</code>. Focus should jump from Button 11 to Button 13.</p>
+    <p>Button 12 is hidden using the HTML <code>hidden</code> attribute. This usually gets treated the same as using CSS <code>display:none</code>. Focus should jump from Button 11 to Button 13.</p>
+
+    <p>Button 14 is hidden using a <code>.visuallyhidden</code> class technique, AND it has <code>tabindex="-1"</code> to remove it from the tabbing order. When using the tab key, focus should jump from button 13 to button 15. <strong>However,</strong> it is still present in the browser's accessibility tree. Will it be discovered by screen readers? For example, when using browse mode instead of forms mode, a list-all-buttons tool, or a skip-to-next-button command. Will speech control be able to operate it, for example using the "click 14", "show numbers", or "click button" commands.</p>
 
     <script>
         var buttons = document.querySelectorAll('button');
