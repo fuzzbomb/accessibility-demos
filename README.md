@@ -13,6 +13,8 @@ A collection of web accessibility demonstrations.
   A page which uses CSSviewport units for a "cover" page filling the whole viewport.  Text is sized using viewport units, which may not be capable of zooming in some browsers.
 - [HTML5 Autofocus](http://fuzzbomb.github.io/accessibility-demos/html5-autofocus-demo.html).
   A form field which uses HTML5 autofocus.  Inteded to test whther browsers allow users to disable HTML5 autofocus.
+- [HMTL5 Date & Time field test](https://fuzzbomb.github.io/accessibility-demos/html5-date-time-field-test.html)
+  Demo of the HTML5 date and time inputs.
 - [Javascript focus](http://fuzzbomb.github.io/accessibility-demos/javascript-focus-demo.html).
   A form field which is focussed using Javascript `.focus()` on load.
 - Landmarks regions using [explicit ARIA roles](https://fuzzbomb.github.io/accessibility-demos/landmarks-explicit-aria-role.html) and [implicit HTML accessibility API mappings](https://fuzzbomb.github.io/accessibility-demos/landmarks-implicit-aria-role.html). Useful for testing how these are reported in various browser/AT combinations.
